@@ -7,7 +7,7 @@
 #
 Name     : qt6grpc
 Version  : 6.6.1
-Release  : 5
+Release  : 6
 URL      : https://download.qt.io/official_releases/qt/6.6/6.6.1/submodules/qtgrpc-everywhere-src-6.6.1.tar.xz
 Source0  : https://download.qt.io/official_releases/qt/6.6/6.6.1/submodules/qtgrpc-everywhere-src-6.6.1.tar.xz
 Summary  : No detailed summary available
@@ -77,7 +77,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1703006028
+export SOURCE_DATE_EPOCH=1703020926
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -113,7 +113,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1703006028
+export SOURCE_DATE_EPOCH=1703020926
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/qt6grpc
 cp %{_builddir}/qtgrpc-everywhere-src-%{version}/LICENSES/BSD-3-Clause.txt %{buildroot}/usr/share/package-licenses/qt6grpc/b073f11f0c81a95ab5e32aa6b5d23a5955a95274 || :
@@ -130,6 +130,7 @@ popd
 /usr/lib64/qt6/metatypes/qt6grpc_relwithdebinfo_metatypes.json
 /usr/lib64/qt6/metatypes/qt6protobuf_relwithdebinfo_metatypes.json
 /usr/lib64/qt6/metatypes/qt6protobufqtcoretypes_relwithdebinfo_metatypes.json
+/usr/lib64/qt6/metatypes/qt6protobufqtguitypes_relwithdebinfo_metatypes.json
 /usr/lib64/qt6/metatypes/qt6protobufwellknowntypes_relwithdebinfo_metatypes.json
 /usr/lib64/qt6/mkspecs/modules/qt_lib_grpc.pri
 /usr/lib64/qt6/mkspecs/modules/qt_lib_grpc_private.pri
@@ -137,11 +138,14 @@ popd
 /usr/lib64/qt6/mkspecs/modules/qt_lib_protobuf_private.pri
 /usr/lib64/qt6/mkspecs/modules/qt_lib_protobufqtcoretypes.pri
 /usr/lib64/qt6/mkspecs/modules/qt_lib_protobufqtcoretypes_private.pri
+/usr/lib64/qt6/mkspecs/modules/qt_lib_protobufqtguitypes.pri
+/usr/lib64/qt6/mkspecs/modules/qt_lib_protobufqtguitypes_private.pri
 /usr/lib64/qt6/mkspecs/modules/qt_lib_protobufwellknowntypes.pri
 /usr/lib64/qt6/mkspecs/modules/qt_lib_protobufwellknowntypes_private.pri
 /usr/lib64/qt6/modules/Grpc.json
 /usr/lib64/qt6/modules/Protobuf.json
 /usr/lib64/qt6/modules/ProtobufQtCoreTypes.json
+/usr/lib64/qt6/modules/ProtobufQtGuiTypes.json
 /usr/lib64/qt6/modules/ProtobufWellKnownTypes.json
 
 %files dev
@@ -210,6 +214,15 @@ popd
 /usr/include/QtProtobufQtCoreTypes/qtprotobufqtcoretypesexports.h
 /usr/include/QtProtobufQtCoreTypes/qtprotobufqtcoretypesglobal.h
 /usr/include/QtProtobufQtCoreTypes/qtprotobufqtcoretypesversion.h
+/usr/include/QtProtobufQtGuiTypes/6.6.1/QtProtobufQtGuiTypes/private/QtGui.qpb.h
+/usr/include/QtProtobufQtGuiTypes/QtGui/QtGui.proto
+/usr/include/QtProtobufQtGuiTypes/QtProtobufQtGuiTypes
+/usr/include/QtProtobufQtGuiTypes/QtProtobufQtGuiTypesDepends
+/usr/include/QtProtobufQtGuiTypes/QtProtobufQtGuiTypesVersion
+/usr/include/QtProtobufQtGuiTypes/qtprotobufqtguitypes.h
+/usr/include/QtProtobufQtGuiTypes/qtprotobufqtguitypesexports.h
+/usr/include/QtProtobufQtGuiTypes/qtprotobufqtguitypesglobal.h
+/usr/include/QtProtobufQtGuiTypes/qtprotobufqtguitypesversion.h
 /usr/include/QtProtobufWellKnownTypes/QtProtobufWellKnownTypes
 /usr/include/QtProtobufWellKnownTypes/QtProtobufWellKnownTypesDepends
 /usr/include/QtProtobufWellKnownTypes/QtProtobufWellKnownTypesVersion
@@ -260,6 +273,15 @@ popd
 /usr/lib64/cmake/Qt6ProtobufQtCoreTypes/Qt6ProtobufQtCoreTypesTargets-relwithdebinfo.cmake
 /usr/lib64/cmake/Qt6ProtobufQtCoreTypes/Qt6ProtobufQtCoreTypesTargets.cmake
 /usr/lib64/cmake/Qt6ProtobufQtCoreTypes/Qt6ProtobufQtCoreTypesVersionlessTargets.cmake
+/usr/lib64/cmake/Qt6ProtobufQtGuiTypes/Qt6ProtobufQtGuiTypesAdditionalTargetInfo.cmake
+/usr/lib64/cmake/Qt6ProtobufQtGuiTypes/Qt6ProtobufQtGuiTypesConfig.cmake
+/usr/lib64/cmake/Qt6ProtobufQtGuiTypes/Qt6ProtobufQtGuiTypesConfigVersion.cmake
+/usr/lib64/cmake/Qt6ProtobufQtGuiTypes/Qt6ProtobufQtGuiTypesConfigVersionImpl.cmake
+/usr/lib64/cmake/Qt6ProtobufQtGuiTypes/Qt6ProtobufQtGuiTypesDependencies.cmake
+/usr/lib64/cmake/Qt6ProtobufQtGuiTypes/Qt6ProtobufQtGuiTypesProtobufProperties.cmake
+/usr/lib64/cmake/Qt6ProtobufQtGuiTypes/Qt6ProtobufQtGuiTypesTargets-relwithdebinfo.cmake
+/usr/lib64/cmake/Qt6ProtobufQtGuiTypes/Qt6ProtobufQtGuiTypesTargets.cmake
+/usr/lib64/cmake/Qt6ProtobufQtGuiTypes/Qt6ProtobufQtGuiTypesVersionlessTargets.cmake
 /usr/lib64/cmake/Qt6ProtobufTools/Qt6ProtobufToolsAdditionalTargetInfo.cmake
 /usr/lib64/cmake/Qt6ProtobufTools/Qt6ProtobufToolsConfig.cmake
 /usr/lib64/cmake/Qt6ProtobufTools/Qt6ProtobufToolsConfigVersion.cmake
@@ -285,11 +307,14 @@ popd
 /usr/lib64/libQt6Protobuf.so
 /usr/lib64/libQt6ProtobufQtCoreTypes.prl
 /usr/lib64/libQt6ProtobufQtCoreTypes.so
+/usr/lib64/libQt6ProtobufQtGuiTypes.prl
+/usr/lib64/libQt6ProtobufQtGuiTypes.so
 /usr/lib64/libQt6ProtobufWellKnownTypes.prl
 /usr/lib64/libQt6ProtobufWellKnownTypes.so
 /usr/lib64/pkgconfig/Qt6Grpc.pc
 /usr/lib64/pkgconfig/Qt6Protobuf.pc
 /usr/lib64/pkgconfig/Qt6ProtobufQtCoreTypes.pc
+/usr/lib64/pkgconfig/Qt6ProtobufQtGuiTypes.pc
 /usr/lib64/pkgconfig/Qt6ProtobufWellKnownTypes.pc
 
 %files lib
@@ -300,6 +325,8 @@ popd
 /usr/lib64/libQt6Protobuf.so.6.6.1
 /usr/lib64/libQt6ProtobufQtCoreTypes.so.6
 /usr/lib64/libQt6ProtobufQtCoreTypes.so.6.6.1
+/usr/lib64/libQt6ProtobufQtGuiTypes.so.6
+/usr/lib64/libQt6ProtobufQtGuiTypes.so.6.6.1
 /usr/lib64/libQt6ProtobufWellKnownTypes.so.6
 /usr/lib64/libQt6ProtobufWellKnownTypes.so.6.6.1
 
