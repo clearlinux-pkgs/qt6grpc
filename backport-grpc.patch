@@ -1,0 +1,27 @@
+--- qtgrpc-everywhere-src-6.6.3/src/tools/qtprotobufgen/qprotobufgenerator.cpp~	2024-03-18 23:53:24.000000000 +0000
++++ qtgrpc-everywhere-src-6.6.3/src/tools/qtprotobufgen/qprotobufgenerator.cpp	2024-05-23 19:27:22.544300876 +0000
+@@ -275,7 +275,7 @@
+                                                 + "/" + field->message_type()->name());
+                         qtTypesSet.insert(field->message_type()->file()->package());
+                     }
+-#ifdef HAVE_PROTOBUF_SYNC_PIPER
++#ifdef HAVE_PROTOBUF_SYNC_PIPERX
+                     if (field->has_optional_keyword())
+ #else
+                     if (file->syntax() == FileDescriptor::SYNTAX_PROTO2 && field->is_optional()
+--- qtgrpc-everywhere-src-6.6.3/src/tools/qtprotobufgen/qprotobufgenerator.cpp~	2024-05-23 19:27:22.000000000 +0000
++++ qtgrpc-everywhere-src-6.6.3/src/tools/qtprotobufgen/qprotobufgenerator.cpp	2024-05-23 21:40:00.299083110 +0000
+@@ -275,13 +275,6 @@
+                                                 + "/" + field->message_type()->name());
+                         qtTypesSet.insert(field->message_type()->file()->package());
+                     }
+-#ifdef HAVE_PROTOBUF_SYNC_PIPERX
+-                    if (field->has_optional_keyword())
+-#else
+-                    if (file->syntax() == FileDescriptor::SYNTAX_PROTO2 && field->is_optional()
+-                        && !field->containing_oneof())
+-#endif
+-                        hasOptionalFields = true;
+                 }
+             });
+ 
