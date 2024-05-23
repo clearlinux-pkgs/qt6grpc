@@ -7,7 +7,7 @@
 #
 Name     : qt6grpc
 Version  : 6.7.1
-Release  : 14
+Release  : 15
 URL      : https://download.qt.io/official_releases/qt/6.7/6.7.1/submodules/qtgrpc-everywhere-src-6.7.1.zip
 Source0  : https://download.qt.io/official_releases/qt/6.7/6.7.1/submodules/qtgrpc-everywhere-src-6.7.1.zip
 Summary  : No detailed summary available
